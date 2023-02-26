@@ -19,3 +19,4 @@ git clone https://github.com/MrDuffs/beauty-landing-page.git
   ```
   npm run dev
   ```
+  Примечание: После выполнения команды будет выведена ссылка на локальный порт, пройдя по которой, мы попадем на наш сайт. 
