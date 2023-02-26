@@ -1,0 +1,226 @@
+.wrapper {
+  header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header_top-container {
+      width: 100%;
+      background: #E5E5E5;
+
+      .header_top {
+        max-width: 1110px;
+        margin: 0 auto;
+        padding-top: 17px;
+        padding-bottom: 16px;
+        display: flex;
+
+        .top_menu-list {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 30px;
+
+          .top_menu-link {
+            color: #333333;
+
+            &:hover {
+              color: #777777;
+            }
+          }
+        }
+      }
+    }
+
+    .header_middle-container {
+      width: 100%;
+      border-bottom: 2px solid #EFEFEF;
+
+      .header_middle {
+        width: 1110px;
+        margin: 0 auto;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .header_logo {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          .header_logo-text {
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 42px;
+            letter-spacing: 0.1em;
+            color: #66C05D;
+          }
+        }
+
+        .header_phone-call {
+          display: flex;
+          align-items: center;
+          gap: 40px;
+
+          .phone_number {
+            font-size: 16px;
+            line-height: 19px;
+          }
+
+          .call_button {
+            padding: 13px 0;
+            background: #FFFFFF;
+            border: 2px solid #66C05D;
+            border-radius: 40px;
+
+            &:hover {
+              color: #777777;
+              border: 2px solid #6ed965;
+            }
+          }
+        }
+
+        .burger_button {
+          display: none;
+        }
+
+        .burger_menu {
+          display: none;
+        }
+      }
+    }
+
+    .header_bottom-container {
+      width: 100%;
+
+      .header_bottom {
+        max-width: 1110px;
+        margin: 0 auto;
+        padding: 30px 0;
+        display: flex;
+
+        .bottom_menu-list {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 40px;
+
+          .bottom_menu-link {
+            font-size: 16px;
+            line-height: 19px;
+            color: #000;
+
+            &:hover {
+              color: #777777;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1225px) {
+  .wrapper {
+    .header {
+      .header_top-container {
+
+        .header_top {
+          max-width: 910px;
+        }
+      }
+
+      .header_middle-container {
+
+        .header_middle {
+          width: 910px;
+        }
+      }
+
+      .header_bottom-container {
+
+        .header_bottom {
+          max-width: 910px;
+          padding: 25px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    .header {
+      .header_top-container {
+
+        .header_top {
+          max-width: 710px;
+        }
+      }
+
+      .header_middle-container {
+
+        .header_middle {
+          width: 710px;
+          padding: 15px 0;
+        }
+      }
+
+      .header_bottom-container {
+
+        .header_bottom {
+          max-width: 710px;
+          padding: 20px 0;
+
+          .bottom_menu-list {
+            justify-content: space-between;
+            gap: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    .header {
+      .header_top-container {
+        display: none;
+      }
+
+      .header_middle-container {
+        border-bottom: 0;
+        .header_middle {
+          width: auto;
+          padding: 15px calc(20px + (35 - 20) * ((100vw - 320px) / (768 - 320)));
+
+          .header_logo {
+            gap: 10px;
+
+            .header_logo-text {
+              font-size: calc(20px + (36 - 20) * ((100vw - 320px) / (768 - 320)));
+            }
+
+            img {
+              width: calc(40px + (80 - 40) * ((100vw - 320px) / (768 - 320)));
+              height: calc(40px + (80 - 40) * ((100vw - 320px) / (768 - 320)));
+            }
+          }
+        }
+      }
+
+      .header_bottom-container {
+        display: none;
+      }
+    }
+  }
+}
